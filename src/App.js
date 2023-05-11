@@ -11,7 +11,13 @@ function App() {
                 alt='Logo de freecodecamp' />
             </div>
             <div className='contenedor-calculadora'>
-
+                {/* 4 filas para los números y signos */}
+                <div className='fila'></div>
+                <div className='fila'></div>
+                <div className='fila'></div>
+                <div className='fila'></div>
+                {/* fila para el botón Limpiar */}
+                <div className='fila'></div>
             </div>
         </div>
     );
