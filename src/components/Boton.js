@@ -1,6 +1,13 @@
 import React from 'react';
 
 function Boton(props) {
+
+    const esOperador = valor => {
+        // si estos tres valores son verdaderos será true y quiere decir q contiene un Operador
+        // si uno de estos es falso entonces será false ya q no contiene un Operador
+        return isNaN(valor) && (valor !== '.') && (valor !== '=')
+    }
+
     return (
         // le agregamos dos atributos importantes, la clase y q es lo q hará el botón cuando se haga clic
         // creamos una clase más elaborada para decidir cual será la clase del Boton ya q en la calculadora necesitaremos disintos estilos para los distintos valores del Botón
