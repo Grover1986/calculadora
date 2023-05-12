@@ -1,6 +1,7 @@
 import './App.css';
 import freeCodeCampLogo from './images/freecodecamp-logo.png'
 import Boton from './components/Boton'
+import Pantalla from './components/Pantalla';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             vamos a crear los componentes pequeños como botones y pantalla y los vamos a ubicar aqui en el componente principal de la Aplicación en lugar de crear otro 
             componente de la Calculadora */}
             <div className='contenedor-calculadora'>
+                <Pantalla />
                 {/* 4 filas para los números y signos */}
                 <div className='fila'>
                     <Boton>1</Boton>
@@ -31,7 +33,7 @@ function App() {
                 <div className='fila'>
                     <Boton>7</Boton>
                     <Boton>8</Boton>
-                    <Boton>8</Boton>
+                    <Boton>9</Boton>
                     <Boton>*</Boton>
                 </div>
                 <div className='fila'>
