@@ -60,7 +60,7 @@ function App() {
                 </div>
                 {/* fila para el botón Limpiar */}
                 <div className='fila'>
-                    <BotonClear>Clear</BotonClear>
+                    <BotonClear manejarClear={() => setInput('')}>Clear</BotonClear>
                 </div>
             </div>
         </div>
