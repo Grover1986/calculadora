@@ -3,8 +3,20 @@ import freeCodeCampLogo from './images/freecodecamp-logo.png'
 import Boton from './components/Boton'
 import Pantalla from './components/Pantalla';
 import BotonClear from './components/BotonClear';
+import { useState } from 'react';
 
 function App() {
+
+    // vamos a trabajar con el estado aquí directamente, otro enfoque sería haber creado otro componente llamado Calculadora y q ese componente tuviera ese estado.
+    // En cualquiera de los dos casos es válido.
+    const [input, setInput] = useState('')
+
+    // ahora creamos una función q va actualizar el input
+    const addInput = value => {
+        setInput(input + value)  // aquí concatenamos nuestro valor inicial con el nuevo valor q recibirá la función, y luego veremos como lo vamos a interpretar
+        // como una operación matematica.
+    }
+
     return (
         <div className='App'>
             <div className='freecodecamp-logo-contenedor'>
@@ -17,7 +29,7 @@ function App() {
             vamos a crear los componentes pequeños como botones y pantalla y los vamos a ubicar aqui en el componente principal de la Aplicación en lugar de crear otro 
             componente de la Calculadora */}
             <div className='contenedor-calculadora'>
-                <Pantalla />
+                <Pantalla input={input} /> {/* le pasamos el prop input y el valor del estado */}
                 {/* 4 filas para los números y signos */}
                 <div className='fila'>
                     <Boton>1</Boton>
