@@ -32,28 +32,31 @@ function App() {
                 <Pantalla input={input} /> {/* le pasamos el prop input y el valor del estado */}
                 {/* 4 filas para los números y signos */}
                 <div className='fila'>
-                    <Boton>1</Boton>
-                    <Boton>2</Boton>
-                    <Boton>3</Boton>
-                    <Boton>+</Boton>
+                    {/* Ya tenemos nuestra función addInput(), ahora tenemos q hacer q cada vez q se haga clic en un botón se llame a esta función para agregar ese valor */}
+                    {/* Para poder hacerlo tenemos q pasarle un prop llamado manejarClic a cada boton, y antes verificamos si nuestro componente Boton esta listo para recibir esa prop, 
+                    y vemos q si xq tiene props como parámetro */}
+                    <Boton manejarClic={addInput}>1</Boton>
+                    <Boton manejarClic={addInput}>2</Boton> {/* listo todos nuestros botones tienen la función addInput, pero notamos q no tienen argumento, ps eso ira en componente Boton */}
+                    <Boton manejarClic={addInput}>3</Boton>
+                    <Boton manejarClic={addInput}>+</Boton>
                 </div>
                 <div className='fila'>
-                    <Boton>4</Boton>
-                    <Boton>5</Boton>
-                    <Boton>6</Boton>
-                    <Boton>-</Boton>
+                    <Boton manejarClic={addInput}>4</Boton>
+                    <Boton manejarClic={addInput}>5</Boton>
+                    <Boton manejarClic={addInput}>6</Boton>
+                    <Boton manejarClic={addInput}>-</Boton>
                 </div>
                 <div className='fila'>
-                    <Boton>7</Boton>
-                    <Boton>8</Boton>
-                    <Boton>9</Boton>
-                    <Boton>*</Boton>
+                    <Boton manejarClic={addInput}>7</Boton>
+                    <Boton manejarClic={addInput}>8</Boton>
+                    <Boton manejarClic={addInput}>9</Boton>
+                    <Boton manejarClic={addInput}>*</Boton>
                 </div>
                 <div className='fila'>
-                    <Boton>=</Boton>
-                    <Boton>0</Boton>
-                    <Boton>.</Boton>
-                    <Boton>/</Boton>
+                    <Boton manejarClic={addInput}>=</Boton>
+                    <Boton manejarClic={addInput}>0</Boton>
+                    <Boton manejarClic={addInput}>.</Boton>
+                    <Boton manejarClic={addInput}>/</Boton>
                 </div>
                 {/* fila para el botón Limpiar */}
                 <div className='fila'>
